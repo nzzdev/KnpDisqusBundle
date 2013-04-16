@@ -21,13 +21,13 @@
     var disqus_config = function () {
 
         this.callbacks.onReady = [function () {
-            if (typeof formatDisqusDate === 'function') {
-                formatDisqusDate('onready');
+            if (NZZ && NZZ.disqus && typeof NZZ.disqus.onReady === 'function') {
+                NZZ.disqus.onReady();
             }
         }];
         this.callbacks.onPaginate = [function () {
-            if (typeof formatDisqusDate === 'function') {
-                formatDisqusDate('onpaginate');
+            if (NZZ && NZZ.disqus && typeof NZZ.disqus.onPaginate === 'function') {
+                NZZ.disqus.onPaginate();
             }
         }];
 
